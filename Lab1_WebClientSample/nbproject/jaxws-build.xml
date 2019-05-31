@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-Products_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Products_1"/>
+        <property name="wsdl-Products_1" location="xml-resources/web-service-references/Products_1/wsdl/flipbits.ddns.net_8080/Lab1/Products.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Products_1" destdir="${build.generated.dir}/jax-wsCache/Products_1" wsdl="${wsdl-Products_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://flipbits.ddns.net:8080/Lab1/Products?wsdl" xnocompile="true" xendorsed="true" package="session">
+            <depends file="${wsdl-Products_1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Products_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Products_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Products_1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/Products_1"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/session"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-Products_1"/>
+</project>

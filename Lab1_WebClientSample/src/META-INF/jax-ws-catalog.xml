@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://flipbits.ddns.net:8080/Lab1/Products" uri="wsdl/flipbits.ddns.net_8080/lab1/products.xml"/>
+    <system systemId="http://flipbits.ddns.net:8080/Lab1/Products?wsdl" uri="wsdl/flipbits.ddns.net_8080/Lab1/Products.wsdl"/>
+    <system systemId="http://flipbits.ddns.net:8080/Lab1/Products?xsd=1" uri="wsdl/flipbits.ddns.net_8080/Lab1/Products.xsd_1.xsd"/>
+</catalog>
